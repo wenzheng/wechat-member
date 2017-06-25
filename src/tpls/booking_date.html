@@ -1,0 +1,42 @@
+	<div class="">
+		<div class="osp-title">
+			<span>发型师的预约日程</span>
+		</div>
+		<!-- 6_6 -->
+		<div class="select-item">
+			<ul class="select-week">
+				<li><a href="javascript:;">今天<br>05/10</a></li>
+				<li class="selected"><a href="javascript:;">周三<br>05/10</a></li>
+				<li><a href="javascript:;">周四<br>05/10</a></li>
+				<li><a href="javascript:;">周五<br>05/10</a></li>
+				<li><a href="javascript:;">周六<br>05/10</a></li>
+			</ul>
+		</div>
+		<div class="select-item">
+			<ul class="select-date">
+				<li><a href="javascript:;">10:00</a></li>
+				<li class="selected"><a href="javascript:;">10:00</a></li>
+				<li><a href="javascript:;">10:00</a></li>
+				<li><a href="javascript:;">11:00</a></li>
+				<li class="unbooking"><a href="javascript:;">12:00</a></li>
+				<li class="unbooking"><a href="javascript:;">13:00</a></li>
+				<li class="unbooking"><a href="javascript:;">14:00</a></li>
+				<li><a href="javascript:;">15:00</a></li>
+				<li><a href="javascript:;">16:00</a></li>
+				<li><a href="javascript:;">17:00</a></li>
+			</ul>
+		</div>
+		<div class="part-btn">
+			<a href="#booking_contacts" class="weui_btn weui_btn_primary">下一步</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function(){
+			var $Item = $('.select-week,.select-date').find('li').not('.unbooking');
+			$Item.on('click',function(){
+				$(this).addClass('selected')
+					.siblings().removeClass('selected')
+			})
+		}())
+	</script>
+	</script>

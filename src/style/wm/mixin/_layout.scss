@@ -1,0 +1,25 @@
+@mixin stretch($top: 0,$right: 0,$bottom: 0,$left: 0){
+	position: fixed;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	z-index: $dialog-z1;
+}
+@mixin middle($width: false,$height: false){
+	@if $width and $height {
+		width:$width;
+		height:$height;
+		position:fixed;
+		left:50%;
+		top:50%;
+		margin:{top:-$height/2;left:-$width/2;}
+		z-index:$dialog-z1;
+	} @else {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		z-index:$dialog-z1; 
+	}
+}

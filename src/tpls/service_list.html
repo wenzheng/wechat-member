@@ -1,0 +1,59 @@
+	<div class="">
+		<div class="segmented" id="service-segmented">
+			<div class="segmented_item on">全部</div>
+			<div class="segmented_item">待付款</div>
+			<div class="segmented_item">已付款</div>
+			<div class="segmented_item">待评价</div>
+		</div>
+		<div class="weui_cells weui_cells_access cells_subtitle" style="margin-top: 0;">
+			<a class="weui_cell" href="#service_detail">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>单号A20160201001</p>
+					<p>服务项：剪发 100.00 护理：36...</p>
+				</div>
+				<div class="weui_cell_ft">
+					<p>未支付</p>
+					<p>应付：1539.00</p>
+				</div>
+			</a>
+			<a class="weui_cell" href="#service_detail">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>单号A20160201001</p>
+					<p>服务项：剪发 100.00 护理：36...</p>
+				</div>
+				<div class="weui_cell_ft">
+					<p>未支付</p>
+					<p>应付：1539.00</p>
+				</div>
+			</a>
+			<a class="weui_cell" href="#service_detail">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>单号A20160201001</p>
+					<p>服务项：038次卡服务</p>
+				</div>
+				<div class="weui_cell_ft">
+					<p>已付款</p>
+					<p>￥1539.00</p>
+				</div>
+			</a>
+			<a class="weui_cell" href="#service_detail">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>单号A20160201001</p>
+					<p>服务项：038次卡服务</p>
+				</div>
+				<div class="weui_cell_ft">
+					<p>已付款</p>
+					<p>￥1539.00</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function(){
+			var $sgmItem = $('#service-segmented').find('.segmented_item');
+			$sgmItem.on('click',function(){
+				$(this).addClass('on')
+					.siblings().removeClass('on')
+			})
+		}())
+	</script>

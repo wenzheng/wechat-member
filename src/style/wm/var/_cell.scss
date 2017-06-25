@@ -1,0 +1,22 @@
+$posCellBg:#FFFFFF;
+$posCellBorderColor:#D9D9D9;
+$posCellGapV:10px;
+$posCellGapH:15px;
+$posCellInnerGapH:.35em;
+$posCellHeight: 44px;
+$posCellFontSize:17px;
+$posCellTipsFontSize:14px;
+$posCellLabelWidth:105px;
+
+$posCellLineHeight: ($posCellHeight - 2 * $posCellGapV) / $posCellFontSize; // 高度为44px，减去上下padding的行高
+$posCellsMarginTop:20px / $posCellFontSize + 0em;
+
+// pos switch
+$posSwitchHeight: 32px;
+
+// pos uploader
+$posUploaderBorderColor:#D9D9D9;
+$posUploaderActiveBorderColor:#999999;
+$posUploaderFileSpacing: 9px;
+$posUploaderSize: 79px;
+$posUploaderBorderWidth: 1px;

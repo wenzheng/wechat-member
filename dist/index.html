@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>wechat - member</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="./style/wm.min.css">
+</head>
+<body class="bg-f5">
+	<div class="wm-container">
+		<!-- page repeat -->
+	</div>
+	<script type="text/html" id="tpl_home">
+<div class="">
+	<div class="user-main-info">
+		<div class="u-head"><img src="./img/pro/home_04.jpg"></div>
+		<div class="u-base">
+			<p class="u-name">Miss.test</p>
+			<p class="u-phone">18002201380</p>
+			<span class="u-attr">VIP会员</span>
+		</div>
+		<a class="u-msg" href="javascript:toast_cs();">
+			<span class="msg-ico"></span>
+			<span class="msg-length">39</span>
+		</a>
+		<div class="u-setting"><a href="#setting" id="go_setting">账户设置 ></a></div>
+		<div class="ubg-img"><img src="./img/ubg-img.jpg"></div>
+	</div>
+	<div class="account-yu">
+		<a class="acc-cell" href="#wallet">
+			<p>15.00</p>
+			<p>我的余额</p>
+		</a>
+		<a class="acc-cell" href="#wallet">
+			<p>233.00</p>
+			<p>赠送金额</p>
+		</a>
+		<a class="acc-cell" href="#score">
+			<p>33</p>
+			<p>我的积分</p>
+		</a>
+	</div>
+	<div class="item-container">
+		<div class="weui_cells weui_cells_access">
+			<a class="weui_cell" href="#booked_empty">
+				<div class="weui_cell_hd"><img src="./img/cell-ico_01.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>我的预约单</p>
+				</div>
+				<div class="weui_cell_ft">查看预约服务</div>
+			</a>
+			<a class="weui_cell" href="javascript:toast_cs();">
+				<div class="weui_cell_hd"><img src="./img/cell-ico_02.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>我的购物单</p>
+				</div>
+				<div class="weui_cell_ft">查看全部</div>
+			</a>
+		</div>
+		<!-- 6_6 -->
+		<div class="weui_cells weui_cells_access">
+			<a class="weui_cell" href="#service_list">
+				<div class="weui_cell_hd"><img src="./img/cell-ico_03.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>我的服务单</p>
+				</div>
+				<div class="weui_cell_ft">查看全部</div>
+			</a>
+			<div class="order-state-row">
+				<a href="#service_list" class="state-cell">
+					<div class="state-ico">
+						<img src="./img/pay-ico.png" alt="">
+						<span>999</span>
+					</div>
+					<p>服务中</p>
+				</a>
+				<a href="#service_list" class="state-cell">
+					<div class="state-ico">
+						<img src="./img/completed-ico.png" alt="">
+						<!-- <span>为零时标签要去掉</span> -->
+					</div>
+					<p>已完成</p>
+				</a>
+				<a href="#service_list" class="state-cell">
+					<div class="state-ico">
+						<img src="./img/comment-ico.png" alt="">
+						<!-- <span>为零时标签要去掉</span> -->
+					</div>
+					<p>待评价</p>
+				</a>
+			</div>
+		</div>
+		<!-- 6_6 -->
+		<div class="weui_cells weui_cells_access">
+			<a class="weui_cell" href="javascript:toast_cs();">
+				<div class="weui_cell_hd"><img src="./img/cell-ico_06.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>服务评论</p>
+				</div>
+				<div class="weui_cell_ft">对服务进行点评</div>
+			</a>
+		</div>
+		<!-- 6_6 -->
+		<div class="weui_cells weui_cells_access">
+			<a class="weui_cell" href="#coupon_list">
+				<div class="weui_cell_hd"><img src="./img/cell-ico_07.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>优惠券</p>
+				</div>
+				<div class="weui_cell_ft">我收到的优惠券</div>
+			</a>
+		</div>
+		<!-- 9_9 -->
+		<div class="tiles-item">
+			<a href="#booking_stylist" class="tiles-cell">
+				<div class="tc-hd"><img src="./img/tiles_ico_03.png" alt=""></div>
+				<div>立即预约</div>
+			</a>
+			<a href="javascript:toast_cs();" class="tiles-cell">
+				<div class="tc-hd"><img src="./img/tiles_ico_01.png" alt=""></div>
+				<div>个人相册</div>
+			</a>
+			<a href="javascript:toast_cs();" class="tiles-cell">
+				<div class="tc-hd"><img src="./img/tiles_ico_02.png" alt=""></div>
+				<div>我的发型师</div>
+			</a>
+			<a href="javascript:toast_cs();" class="tiles-cell">
+				<div class="tc-hd"><img src="./img/tiles_ico_04.png" alt=""></div>
+				<div>会员活动</div>
+			</a>
+			<a href="javascript:toast_cs();" class="tiles-cell">
+				<div class="tc-hd"><img src="./img/tiles_ico_05.png" alt=""></div>
+				<div>好友SHOW</div>
+			</a>
+			<a href="javascript:toast_cs();" class="tiles-cell">
+				<div class="tc-hd"><img src="./img/tiles_ico_06.png" alt=""></div>
+				<div>我的分享</div>
+			</a>
+			<a href="javascript:toast_cs();" class="tiles-cell">
+				<div class="tc-hd"><img src="./img/tiles_ico_07.png" alt=""></div>
+				<div>我的收藏</div>
+			</a>
+			<a href="javascript:toast_cs();" class="tiles-cell">
+				<div class="tc-hd"><img src="./img/tiles_ico_08.png" alt=""></div>
+				<div>我要优惠</div>
+			</a>
+		</div>
+	</div>
+	<div class="wm-toast" id="toast_cs" style="display:none;">请再等等，该页面稍后公开</div>
+</div>
+<script type="text/javascript">
+	function toast_cs(){
+		var cs = $('#toast_cs')
+		if (cs.css('display') != 'none') return;
+        cs.fadeIn(100);
+        setTimeout(function () {
+            cs.fadeOut(100);
+        }, 1400);
+	}
+</script>
+</script>
+	<script type="text/html" id="tpl_setting">
+	<div class="">
+		<div class="weui_cells weui_cells_access">
+			<a class="weui_cell change-avatar" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>修改头像</p>
+				</div>
+				<div class="weui_cell_ft">
+					<div class="h-img"><img src="./img/pro/home_04.jpg"></div>
+				</div>
+			</a>
+			<a class="weui_cell" href="javascript:;" id="change-niname">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>昵称</p>
+				</div>
+				<div class="weui_cell_ft">Mr.ni</div>
+			</a>
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>姓名</p>
+				</div>
+				<div class="weui_cell_ft">Mr.test</div>
+			</a>
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>性别</p>
+				</div>
+				<div class="weui_cell_ft">男</div>
+			</a>
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>出生年月</p>
+				</div>
+				<div class="weui_cell_ft">1990年5月3日</div>
+			</a>
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>会员密码</p>
+				</div>
+				<div class="weui_cell_ft">修改</div>
+			</a>
+		</div>
+		<!-- 6_6 -->
+		<div class="weui_cells weui_cells_access">
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>手机号码</p>
+				</div>
+				<div class="weui_cell_ft">13800138000</div>
+			</a>
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>身份证号</p>
+				</div>
+				<div class="weui_cell_ft">441223198411010012</div>
+			</a>
+			<a class="weui_cell no_access"><!-- 不可修改的选项增加类名no_access -->
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>常居地</p>
+				</div>
+				<div class="weui_cell_ft">广东省广州市天河区天河大厦112号</div>
+			</a>
+		</div>
+		<!-- 6_6 -->
+		<div class="weui_cells weui_cells_access">
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>所属店铺</p>
+				</div>
+				<div class="weui_cell_ft">乐华店</div>
+			</a>
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>职位类型</p>
+				</div>
+				<div class="weui_cell_ft">大工</div>
+			</a>
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>职位名称</p>
+				</div>
+				<div class="weui_cell_ft">设计总监</div>
+			</a>
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>入职时间</p>
+				</div>
+				<div class="weui_cell_ft">2015-06-03</div>
+			</a>
+			<a class="weui_cell" href="javascript:;">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>个人描述</p>
+				</div>
+				<div class="weui_cell_ft">修改</div>
+			</a>
+		</div>
+		<br>
+	</div>
+</script>
+	<script type="text/html" id="tpl_wallet">
+	<div class="">
+		<div class="account-info">
+			<div class="ac-yue"><p>余额(元)</p><p>83444.56</p></div>
+			<div class="ac-det">
+				<span>现金账户：3200</span>
+				<span>赠送账户：<em>3500</em></span>
+				<a href="#" class="recharge-btn">立即充值</a>
+			</div>
+		</div>
+		<div class="det-title"><span>余额明细</span></div>
+		<div class="yue-log">
+			<div class="list-title">5月 / 2016年</div>
+			<div class="weui_cells cells_record">
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<p>流水单号A00001</p>
+						<p>21日 14:20</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>现金+140.00</p>
+						<p>余额 1540.00</p>
+					</div>
+					<div class="weui_cell_ft">
+						<p>华乐店</p>
+						<p>前台消费</p>
+					</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<p>流水单号A00001</p>
+						<p>21日 14:20</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>现金+140.00</p>
+						<p>余额 1540.00</p>
+					</div>
+					<div class="weui_cell_ft">
+						<p>华乐店</p>
+						<p>前台消费</p>
+					</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<p>流水单号A00001</p>
+						<p>21日 14:20</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>现金+140.00</p>
+						<p>余额 1540.00</p>
+					</div>
+					<div class="weui_cell_ft">
+						<p>华乐店</p>
+						<p>前台消费</p>
+					</div>
+				</div>
+			</div>
+			<div class="list-title">4月 / 2016年</div>
+			<div class="weui_cells cells_record">
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<p>流水单号A00001</p>
+						<p>21日 14:20</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>现金+140.00</p>
+						<p>余额 1540.00</p>
+					</div>
+					<div class="weui_cell_ft">
+						<p>华乐店</p>
+						<p>前台消费</p>
+					</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<p>流水单号A00001</p>
+						<p>21日 14:20</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>现金+140.00</p>
+						<p>余额 1540.00</p>
+					</div>
+					<div class="weui_cell_ft">
+						<p>华乐店</p>
+						<p>前台消费</p>
+					</div>
+				</div>
+				<div class="weui_cell">
+					<div class="weui_cell_hd">
+						<p>流水单号A00001</p>
+						<p>21日 14:20</p>
+					</div>
+					<div class="weui_cell_bd weui_cell_primary">
+						<p>现金+140.00</p>
+						<p>余额 1540.00</p>
+					</div>
+					<div class="weui_cell_ft">
+						<p>华乐店</p>
+						<p>前台消费</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+	<script type="text/html" id="tpl_score">
+	<div class="">
+		<div class="jifen_panel">
+			<div class="jf_panel_bd">
+				<span class="jf-all">积分：5000</span>
+				<a href="javascript:;" class="jf-cashing">积分兑换</a>
+			</div>
+		</div>
+		
+		<div class="weui_cells flex-cells-auto jf-cells">
+			<div class="weui_cell flex-cell-title">
+				<div class="weui_cell_bd">
+					<p>时间</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>积分类型</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>积分值</p>
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_bd">
+					<p>2016-06-25 15:35:17</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>会员卡充值</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>50</p>
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_bd">
+					<p>2016-06-25 15:35:17</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>会员卡充值</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>50</p>
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_bd">
+					<p>2016-06-25 15:35:17</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>积分兑换</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>-10</p>
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_bd">
+					<p>2016-06-25 15:35:17</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>关注公众号</p>
+				</div>
+				<div class="weui_cell_bd">
+					<p>100</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+	<script type="text/html" id="tpl_booking_stylist">
+	<div class="">
+		<!-- 6_6 -->
+		<div class="order-sty-list">
+			<div class="of-sty-card">
+				<div class="sty-avatar">
+					<img src="./img/pro/_reserve_stylist.jpg">
+				</div>
+				<div class="sty-info">
+					<p class="s-nj">
+						<em>Rokey</em>，<span>高级发型师</span>
+					</p>
+					<p class="s-place"><i></i>华乐店</p>
+					<p class="s-phone"><i></i>13800138000</p>
+					<p class="s-addr">广州市越秀区水荫路66号西侧铺07号铺</p>
+					<div class="fav-btn">
+						<a href="#booking_date" class="weui_btn weui_btn_mini weui_btn_primary">预约</a>
+					</div>
+				</div>
+			</div>
+			<div class="of-sty-card">
+				<div class="sty-avatar">
+					<img src="./img/pro/_reserve_stylist-02.jpg">
+				</div>
+				<div class="sty-info">
+					<p class="s-nj">
+						<em>Rokey</em>，<span>高级发型师</span>
+					</p>
+					<p class="s-place"><i></i>华乐店</p>
+					<p class="s-phone"><i></i>13800138000</p>
+					<p class="s-addr">广州市越秀区水荫路66号西侧铺07号铺</p>
+					<div class="fav-btn">
+						<a href="#booking_date" class="weui_btn weui_btn_mini weui_btn_primary">预约</a>
+					</div>
+				</div>
+			</div>
+			<div class="of-sty-card">
+				<div class="sty-avatar">
+					<img src="./img/pro/_reserve_stylist-03.jpg">
+				</div>
+				<div class="sty-info">
+					<p class="s-nj">
+						<em>Rokey</em>，<span>高级发型师</span>
+					</p>
+					<p class="s-place"><i></i>华乐店</p>
+					<p class="s-phone"><i></i>13800138000</p>
+					<p class="s-addr">广州市越秀区水荫路66号西侧铺07号铺</p>
+					<div class="fav-btn">
+						<a href="#booking_date" class="weui_btn weui_btn_mini weui_btn_primary">预约</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+	<script type="text/html" id="tpl_booking_date">
+	<div class="">
+		<div class="osp-title">
+			<span>发型师的预约日程</span>
+		</div>
+		<!-- 6_6 -->
+		<div class="select-item">
+			<ul class="select-week">
+				<li><a href="javascript:;">今天<br>05/10</a></li>
+				<li class="selected"><a href="javascript:;">周三<br>05/10</a></li>
+				<li><a href="javascript:;">周四<br>05/10</a></li>
+				<li><a href="javascript:;">周五<br>05/10</a></li>
+				<li><a href="javascript:;">周六<br>05/10</a></li>
+			</ul>
+		</div>
+		<div class="select-item">
+			<ul class="select-date">
+				<li><a href="javascript:;">10:00</a></li>
+				<li class="selected"><a href="javascript:;">10:00</a></li>
+				<li><a href="javascript:;">10:00</a></li>
+				<li><a href="javascript:;">11:00</a></li>
+				<li class="unbooking"><a href="javascript:;">12:00</a></li>
+				<li class="unbooking"><a href="javascript:;">13:00</a></li>
+				<li class="unbooking"><a href="javascript:;">14:00</a></li>
+				<li><a href="javascript:;">15:00</a></li>
+				<li><a href="javascript:;">16:00</a></li>
+				<li><a href="javascript:;">17:00</a></li>
+			</ul>
+		</div>
+		<div class="part-btn">
+			<a href="#booking_contacts" class="weui_btn weui_btn_primary">下一步</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function(){
+			var $Item = $('.select-week,.select-date').find('li').not('.unbooking');
+			$Item.on('click',function(){
+				$(this).addClass('selected')
+					.siblings().removeClass('selected')
+			})
+		}())
+	</script>
+	</script>
+</script>
+	<script type="text/html" id="tpl_booking_contacts">
+	<div class="">
+		<div class="weui_cells weui_cells_form">
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label for="" class="weui_label">服务时间</label></div>
+				<div class="weui_cell_bd weui_cell_primary">2016-05-10 星期二 10:00</div>
+			</div>
+		</div>
+		<div class="weui_cells weui_cells_form">
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">预约人</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="text" placeholder="请输入预约人姓名">
+				</div>
+				<div class="weui_cell_ft ft_checkbox_text">
+					<input class="weui_switch" type="checkbox">
+					<p><span>男</span><span>女</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="weui_cells weui_cells_form">
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">联系电话</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入手机号">
+				</div>
+			</div>
+		</div>
+		<div class="weui_cells weui_cells_form cells_form_textarea">
+			<div class="weui_cell">
+				<div class="weui_cell_hd"><label class="weui_label">我的留言</label></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<textarea class="leave-word" placeholder="请写下你给发型师的留言"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="cells_link"><a href="javascript:history.back();" class="backlink">返回上一步编辑</a></div>
+		<div class="part-btn">
+			<a href="javascript:;" class="weui_btn weui_btn_primary">提交预约</a>
+		</div>
+	</div>
+</script>
+	<script type="text/html" id="tpl_service_list">
+	<div class="">
+		<div class="segmented" id="service-segmented">
+			<div class="segmented_item on">全部</div>
+			<div class="segmented_item">待付款</div>
+			<div class="segmented_item">已付款</div>
+			<div class="segmented_item">待评价</div>
+		</div>
+		<div class="weui_cells weui_cells_access cells_subtitle" style="margin-top: 0;">
+			<a class="weui_cell" href="#service_detail">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>单号A20160201001</p>
+					<p>服务项：剪发 100.00 护理：36...</p>
+				</div>
+				<div class="weui_cell_ft">
+					<p>未支付</p>
+					<p>应付：1539.00</p>
+				</div>
+			</a>
+			<a class="weui_cell" href="#service_detail">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>单号A20160201001</p>
+					<p>服务项：剪发 100.00 护理：36...</p>
+				</div>
+				<div class="weui_cell_ft">
+					<p>未支付</p>
+					<p>应付：1539.00</p>
+				</div>
+			</a>
+			<a class="weui_cell" href="#service_detail">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>单号A20160201001</p>
+					<p>服务项：038次卡服务</p>
+				</div>
+				<div class="weui_cell_ft">
+					<p>已付款</p>
+					<p>￥1539.00</p>
+				</div>
+			</a>
+			<a class="weui_cell" href="#service_detail">
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>单号A20160201001</p>
+					<p>服务项：038次卡服务</p>
+				</div>
+				<div class="weui_cell_ft">
+					<p>已付款</p>
+					<p>￥1539.00</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function(){
+			var $sgmItem = $('#service-segmented').find('.segmented_item');
+			$sgmItem.on('click',function(){
+				$(this).addClass('on')
+					.siblings().removeClass('on')
+			})
+		}())
+	</script>
+</script>
+	<script type="text/html" id="tpl_service_detail">
+	<div class="">
+		<div class="weui_cells">
+			<div class="weui_cell order-cell-title">
+				<div class="weui_cell_hd"><img src="./img/my_order_item_ico.png" alt=""></div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<p>单号A20160201001</p>
+				</div>
+				<div class="weui_cell_ft order-going">待付款</div>
+			</div>
+		</div>
+		<div class="wm-panels">
+			<div class="wm-panel" style="margin-top:0;">
+				<div class="wm-panel__bd">
+					<div class="wm-panel__item">
+						<div class="wm-panel__label">店铺</div>
+						<div class="wm-panel__value">华乐店</div>
+					</div>
+					<div class="wm-panel__item">
+						<div class="wm-panel__label">发型师</div>
+						<div class="wm-panel__value">Tom/Jerry</div>
+					</div>
+					<div class="wm-panel__item">
+						<div class="wm-panel__label">服务项</div>
+						<div class="wm-panel__value">
+							<p>色彩打蜡 1200.00</p>
+							<p>剪发 100.00</p>
+							<p>护理 250.00</p>
+							<p>长度及胸驳发套餐 2400.00</p>
+						</div>
+					</div>
+					<div class="wm-panel__item">
+						<div class="wm-panel__label">下单时间</div>
+						<div class="wm-panel__value">2016-05-07 10:12:17</div>
+					</div>
+				</div>
+			</div>
+			<div class="wm-panel" style="margin-top:0;">
+				<div class="wm-panel__bd">
+					<div class="wm-panel__item">
+						<div class="wm-panel__label">合计</div>
+						<div class="wm-panel__value">￥3500.00</div>
+					</div>
+					<div class="wm-panel__item">
+						<div class="wm-panel__label">折扣</div>
+						<div class="wm-panel__value">￥-100.00</div>
+					</div>
+					<div class="wm-panel__item">
+						<div class="wm-panel__label">应付</div>
+						<div class="wm-panel__value f-hl">￥3400.00</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="btn_wrap">
+			<a href="javascript:;" class="weui_btn weui_btn_primary">在线支付</a>
+		</div>
+	</div>
+</script>
+	<script type="text/html" id="tpl_coupon_list">
+	<div class="">
+		<div class="coupon-panels">
+			<div class="coupon-panel">
+				<a class="coupon-hd" href="#coupon_detail">
+					<div class="cp-bg"><!-- <img src="./img/pro/coupon_bg.jpg"> --></div>
+					<div class="cp-text">
+						<p class="cp-title">剪发券*启创会员专享</p>
+						<p class="cp-desc">最高抵扣50元，启创会员均可使用，使用于所以店铺</p>
+					</div>
+				</a>
+				<div class="coupon-ft clearfix">
+					<div class="cp-line"></div>
+					<div class="cp-date">有效期至：2016-05-30</div>
+					<div class="cp-getit">
+						<a class="btn_radius15" href="javascript:;">立即领取</a>
+					</div>
+				</div>
+			</div>
+			<!-- 6_6 -->
+			<div class="coupon-panel">
+				<a class="coupon-hd" href="#coupon_detail">
+					<div class="cp-bg"><img src="./img/pro/coupon_bg.jpg"></div>
+					<div class="cp-text">
+						<p class="cp-title">剪发券*启创会员专享</p>
+						<p class="cp-desc">最高抵扣50元，启创会员均可使用，使用于所以店铺</p>
+					</div>
+				</a>
+				<div class="coupon-ft clearfix">
+					<div class="cp-line"></div>
+					<div class="cp-date">有效期至：2016-05-30</div>
+					<div class="cp-getit">
+						<a class="btn_radius15" href="javascript:;">立即领取</a>
+					</div>
+				</div>
+			</div>
+			<div class="coupon-panel">
+				<a class="coupon-hd" href="javascript:;">
+					<div class="cp-bg"><img src="./img/pro/coupon_bg2.jpg"></div>
+					<div class="cp-text">
+						<p class="cp-title">剪发券*启创会员专享</p>
+						<p class="cp-desc">最高抵扣50元，启创会员均可使用，使用于所以店铺</p>
+					</div>
+				</a>
+				<div class="coupon-ft clearfix">
+					<div class="cp-line"></div>
+					<div class="cp-date">有效期至：2016-05-30</div>
+					<div class="cp-getit">
+						<a class="btn_radius15" href="javascript:;">立即领取</a>
+					</div>
+				</div>
+			</div>
+			<!-- 使用coupon-used / coupon-disabled 类名增加已使用、已失效状态-->
+			<div class="coupon-panel coupon-used">
+				<a class="coupon-hd" href="javascript:;">
+					<div class="cp-bg"><img src="./img/pro/coupon_bg2.jpg"></div>
+					<div class="cp-text">
+						<p class="cp-title">剪发券*启创会员专享</p>
+						<p class="cp-desc">最高抵扣50元，启创会员均可使用，使用于所以店铺</p>
+					</div>
+				</a>
+				<div class="coupon-ft clearfix">
+					<div class="cp-line"></div>
+					<div class="cp-date">有效期至：2016-05-30</div>
+				</div>
+			</div>
+			<div class="coupon-panel coupon-disabled">
+				<a class="coupon-hd" href="javascript:;">
+					<div class="cp-bg"><img src="./img/pro/coupon_bg2.jpg"></div>
+					<div class="cp-text">
+						<p class="cp-title">剪发券*启创会员专享</p>
+						<p class="cp-desc">最高抵扣50元，启创会员均可使用，使用于所以店铺</p>
+					</div>
+				</a>
+				<div class="coupon-ft clearfix">
+					<div class="cp-line"></div>
+					<div class="cp-date">有效期至：2016-05-30</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+	<script type="text/html" id="tpl_coupon_detail">
+	<div class="">
+		<div class="coupon-detail">
+			<div class="coupon-detail-hd">
+				<div class="cd-bg"><img src="./img/pro/coupon_detail_02-01.jpg"></div>
+				<div class="cd-text">
+					<p class="cd-title"></p>
+					<p class="cd-time"></p>
+				</div>
+			</div>
+			<div class="coupon-detail-bd">
+				<div class="cp-line"></div>
+				<div class="cd-item">
+					<p class="cd-dt">适用店铺</p>
+					<p class="cd-dd">启创华乐店会员</p>
+				</div>
+				<div class="cd-item">
+					<p class="cd-dt">详细信息</p>
+					<p class="cd-dd">满200使用，最高抵扣50元，启创会员均可使用，使用仅适用于华乐店铺</p>
+				</div>
+				<div class="cd-item">
+					<p class="cd-dt">使用规则</p>
+					<p class="cd-dd">
+					1、购买商品时（除特例商品外），购物券可抵购物
+					券券面显示的现金价值；<br>
+					2、原则上每张订单只能使用一张购物券，且不得与
+					其他优惠方式同时使用；<br>
+					3、本券不得兑换现金不设找零;<br>
+					4、退货时，本券价值不予退还现金；<br>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="coupon-detail-fixed">
+			<a href="javascript:;" class="cd-fixed-btn">立即领取</a>&nbsp;&nbsp;
+			<a href="javascript:;" class="cd-fixed-btn" id="now-share-btn">立即分享</a>
+		</div>
+		<div class="share-moments-tip" style="display:none;">
+			<img src="./img/share_moments_tip.png">
+		</div>
+	</div>
+	<script type="text/javascript">
+		
+		//分享
+		$('#now-share-btn').on('click',function(){
+			$('.share-moments-tip').show().on('click',function(){
+				$(this).off('click').hide();
+			})
+		})
+	</script>
+</script>
+	<script type="text/html" id="tpl_booked_empty">
+<div>
+	<div class="booked-tobtn">
+		<p class="text-center">暂无预约记录</p>
+		<br>
+		<a href="#booking_stylist" class="weui_btn weui_btn_plain_primary">马上预约</a>
+	</div>
+</div>
+</script>
+
+	<script src="./script/zepto.min.js"></script>
+	<script src="./script/wm.min.js"></script>
+</body>
+</html>

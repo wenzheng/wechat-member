@@ -1,0 +1,136 @@
+
+
+input[type="text"],input[type="number"]{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	outline: none;
+}
+
+html/* ,
+button,
+input,
+select,
+textarea */ {
+//	font-family: Arial, "Microsoft YaHei", "Helvetica Neue", Helvetica, SimSun, Tahoma, sans-serif;
+	// font-size:16px;
+}
+
+img{
+	vertical-align:middle;
+}
+button{
+	outline: 0;
+	border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+h4 {
+	font-size: 14px;
+}
+
+h5,
+h6 {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+ul,
+ol,
+li,
+dl,
+dd {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: none outside none;
+}
+
+/* a{
+	color: inherit;
+}
+a:hover{
+	color: inherit;
+}
+
+.container-fixed{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+} */
+
+
+/**
+var & mixin & fn & utilities
+===============================================
+*/
+
+
+
+
+
+
+.bg-f5{background-color: $bgColorDefault;}
+.no-scroll{overflow: hidden;}
+.hidden{display: none;}
+.text-center{text-align: center;}
+
+
+/* font
+------------------------------------------ */
+.f-red{
+	color:#f51d00;
+}
+.f-gray{
+	color: $colorGray;
+}
+
+.f-hl{
+	color: $colorPrimary;
+}

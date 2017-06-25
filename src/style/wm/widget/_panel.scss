@@ -1,0 +1,54 @@
+.wm-panels {
+    background-color: #FFFFFF;
+    position: relative;
+    &:before {
+        @include bt;
+    }
+    &:after {
+        @include bb;
+    }
+}
+.wm-panel {
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    & + .wm-panel:before {
+        @include bt;
+        left: 15px;
+        right: 15px;
+        width: auto;
+    }
+}
+
+.wm-panel__hd {
+    padding: 14px 15px 10px;
+    color: $textColorTitle;
+    font-size: $textSizeTitle;
+    position: relative;
+    &:after {
+        @include bb;
+    }
+}
+
+.wm-panel__bd{
+	padding: 15px;
+}
+
+.wm-panel__item{
+    overflow: hidden;
+}
+.wm-panel__label{
+    float: left;
+    margin-right: 3em;
+    min-width: 4em;
+    color: $colorGray;
+    text-align: justify;
+    text-align-last: justify;
+}
+.wm-panel__value{
+    display: block;
+    overflow: hidden;
+    word-break:normal;
+    word-wrap: break-word;
+    text-align: right;
+}

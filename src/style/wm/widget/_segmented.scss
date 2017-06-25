@@ -1,0 +1,28 @@
+.segmented{
+	height: 50px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	display: flex;
+	background-color: #fff;
+}
+.segmented_item{
+	border: 1px solid $colorPrimary;
+	border-right-width: 0;
+	flex: 1;
+	text-align: center;
+	height: 29px;
+	line-height: 28px;
+	color: $colorPrimary;
+	box-sizing: border-box;
+	&:first-child{
+		border-radius: 4px 0 0 4px;
+	}
+	&:last-child{
+		border-radius: 0 4px 4px 0;
+		border-right-width: 1px;
+	}
+}
+.segmented_item.on{
+	background-color: $colorPrimary;
+	color: #fff;
+}

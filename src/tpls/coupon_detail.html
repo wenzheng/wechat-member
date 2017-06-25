@@ -1,0 +1,49 @@
+	<div class="">
+		<div class="coupon-detail">
+			<div class="coupon-detail-hd">
+				<div class="cd-bg"><img src="./img/pro/coupon_detail_02-01.jpg"></div>
+				<div class="cd-text">
+					<p class="cd-title"></p>
+					<p class="cd-time"></p>
+				</div>
+			</div>
+			<div class="coupon-detail-bd">
+				<div class="cp-line"></div>
+				<div class="cd-item">
+					<p class="cd-dt">适用店铺</p>
+					<p class="cd-dd">启创华乐店会员</p>
+				</div>
+				<div class="cd-item">
+					<p class="cd-dt">详细信息</p>
+					<p class="cd-dd">满200使用，最高抵扣50元，启创会员均可使用，使用仅适用于华乐店铺</p>
+				</div>
+				<div class="cd-item">
+					<p class="cd-dt">使用规则</p>
+					<p class="cd-dd">
+					1、购买商品时（除特例商品外），购物券可抵购物
+					券券面显示的现金价值；<br>
+					2、原则上每张订单只能使用一张购物券，且不得与
+					其他优惠方式同时使用；<br>
+					3、本券不得兑换现金不设找零;<br>
+					4、退货时，本券价值不予退还现金；<br>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="coupon-detail-fixed">
+			<a href="javascript:;" class="cd-fixed-btn">立即领取</a>&nbsp;&nbsp;
+			<a href="javascript:;" class="cd-fixed-btn" id="now-share-btn">立即分享</a>
+		</div>
+		<div class="share-moments-tip" style="display:none;">
+			<img src="./img/share_moments_tip.png">
+		</div>
+	</div>
+	<script type="text/javascript">
+		
+		//分享
+		$('#now-share-btn').on('click',function(){
+			$('.share-moments-tip').show().on('click',function(){
+				$(this).off('click').hide();
+			})
+		})
+	</script>

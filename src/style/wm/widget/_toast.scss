@@ -1,0 +1,14 @@
+.wm-toast {
+    position: fixed;
+    z-index: 50000;
+    max-width: 60%;
+    bottom: 80px;
+    left: 50%;
+    transform:translateX(-50%);
+    background: rgba(40, 40, 40, 0.75);
+    text-align: center;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    white-space: nowrap;
+}
