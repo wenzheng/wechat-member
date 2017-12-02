@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
-	less = require('gulp-less'),
 	sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync').create(),
@@ -47,30 +46,10 @@ gulp.task('html', function() {
 		.pipe(browserSync.reload({stream:true}))
 });
 
-gulp.task('less', function (){
-    var banner = '/*!\n\
-				 * WeUI v0.4.3 (https://github.com/weui/weui)\n\
-				 * Copyright 2016 Tencent, Inc.\n\
-				 * Licensed under the MIT license\n\
-				 */\n\n';
-    gulp.src('src/style/weui-0.4.x/weui.less')
-        // .pipe(sourcemaps.init())
-        .pipe(less().on('error', function (e) {
-            console.error(e.message);
-            this.emit('end');
-        }))
-        .pipe(autoprefixer(['iOS >= 7', 'Android >= 4.1']))
-        .pipe(header(banner, { pkg : pkg } ))
-        // .pipe(sourcemaps.write('./'))
-        
-        .pipe(rename(function (path) {
-            path.basename += '.min';
-            path.extname = '.scss';
-        }))
-        .pipe(gulp.dest('src/style/weui-0.4.x/'));
-});
+gulp.task('style',function (){
+	gulp.src('node_modules/weui/dist/style/weui.min.css')
+		.pipe(gulp.dest('./dist/style'))
 
-gulp.task('sass',function (){
 	setTimeout(function(){
 		gulp.src('./src/style/index.scss')
 			.pipe(sourcemaps.init())
@@ -85,19 +64,6 @@ gulp.task('sass',function (){
 			.pipe(browserSync.reload({stream:true}))
 	},500);
 })
-
-/*gulp.task('spriter:icon',function(){
-	var iconSpriter = 'iconSpriter';
-	return gulp.src('./src/sass/widget/_icon-toSpriter.scss')
-		.pipe(spriter({
-            'spriteSheet': './dist/img/'+ iconSpriter +'.png',
-            'pathToSpriteSheetFromCSS': '../img/'+ iconSpriter +'.png'
-        }))
-        .pipe(rename(function (file){
-        	file.basename = file.basename.replace('-toSpriter','');
-        }))
-        .pipe(gulp.dest('./src/sass/widget'));
-})*/
 
 gulp.task('js',function (){
 	gulp.src([
@@ -140,15 +106,16 @@ gulp.task('reset',function (){
 })
 
 gulp.task('release',function (){
-	setTimeout(function(){
-		gulp.start('html','assets','js','sass')
-	},2000)
+	gulp.start('html','assets','js','style')
 })
 
-gulp.task('default',['serve','release'],function(){
-	gulp.watch('src/style/**/*.scss',['sass']);
-	// gulp.watch('src/sass/**/*-toSpriter.scss',['spriter:icon']);
+gulp.task('prod', ['release'])
+
+gulp.task('dev',['serve','release'],function(){
+	gulp.watch('src/style/**/*.scss',['style']);
 	gulp.watch('src/script/wm-*.js',['js']);
 	gulp.watch('src/**/*.?(png|jpg|gif|json)',['assets']);
 	gulp.watch('src/**/*.html',['html']);
 })
+
+gulp.task('default', ['dev'])

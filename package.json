@@ -4,10 +4,14 @@
   "description": "wechat member",
   "main": "index.html",
   "scripts": {
-    "start": "gulp"
+    "clean": "gulp reset",
+    "dev": "gulp dev",
+    "prod": "gulp prod",
+    "build": "gulp reset && gulp prod"
   },
   "keywords": [
-    "wechat","member"
+    "wechat",
+    "member"
   ],
   "author": "dengliran",
   "homepage": "https://github.com/dengliran/wechat-member",
@@ -20,12 +24,14 @@
     "gulp-concat": "^2.6.1",
     "gulp-css-spriter": "^0.4.0",
     "gulp-header": "^1.8.8",
-    "gulp-less": "^3.3.2",
     "gulp-minify-css": "^1.2.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.5.0",
     "gulp-tap": "^1.0.1",
     "gulp-uglify": "^2.1.2"
+  },
+  "dependencies": {
+    "weui": "^0.4.3"
   }
 }

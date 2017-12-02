@@ -1,0 +1,15 @@
+.btn_wrap{
+	margin: 15px;
+}
+
+
+.weui_btn.weui_btn_primary{
+	background-color: $hl-color;
+}
+.weui_btn.weui_btn_primary:active{
+	background-color: $hl-color-active;
+}
+.weui_btn.weui_btn_plain_primary{
+    color: $colorPrimary;
+    border: 1px solid $colorPrimary;
+}
